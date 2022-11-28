@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/fa4474c805.js" crossorigin="anonymous"></script>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <title>board</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>board</h1>
+            <!-- <section class="input-area">
+                제목 <input type="text" id="task-input"/>
+                작성자 <input type="text" id="task-input"/>
+                내용 <input type="text" id="task-input"/>
+                <button id="add-button">등록<i class="fa-solid fa-circle-plus"></i></button>
+            </section> -->
+            <h3>게시판</h3>
+            <section class="task-area">
+                <div class="task-tabs">
+                    <!-- <div id="under-line"></div> -->
+                    <div>글 목록</div>
+                    <button class="write_button" onclick="showPopup();">글쓰기</button>
+                    <!-- <div id="ongoing">doing</div>
+                    <div id="done">done</div> -->
+                </div>
+                <thead>
+                    <tr>
+                        <th>제목</th>
+                    </tr>
+                </thead>
+                <div id="task-board">
+                    <div class="task">
+                        <div><a href="./content_page.html">우산챙기기</a></div>
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
