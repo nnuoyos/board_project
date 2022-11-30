@@ -2,27 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>팝업창게시판</title>
+    <title>js_board</title>
     <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <h3>게시판</h3>
-    <input type="button" value="글쓰기" onclick="showPopup();">
-    <table class="list" id="listAll">
-        <thead>
-            <tr>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>내용</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
+    <h2>js_board
 
-        </tbody>
+    </h2>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <input type="text" name="title" id="title" placeholder="제목">
+                    </div>
+                    <div>
+                        <input type="text" name="writer" id="writer" placeholder="작성자">
+                    </div>
+                    <div>
+                        <input type="text" name="content" id="content" placeholder="내용">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="listAll">
+                    <thead>
+                        <tr>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>내용</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
     </table>
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

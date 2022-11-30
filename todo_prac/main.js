@@ -17,6 +17,16 @@ console.log(taskInput);
 let addButton = document.getElementById('add-button');
 console.log(addButton);
 
+
+function readFormData(){ //제목,작성자,내용을 한곳에 모아놓으려면 배열들을 모아야함
+    var formData = {};
+    formData["title"]=document.getElementById("title").value;
+    formData["writer"]=document.getElementById("writer").value;
+    formData["content"]=document.getElementById("content").value;
+    return formData;
+}
+
+
 let taskList = []; //입력 받은 값을 차례로 배열에 넣을 예정
 let filterList = [];
 let tabs = document.querySelectorAll('.task-tabs div');

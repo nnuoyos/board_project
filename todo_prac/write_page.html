@@ -8,13 +8,26 @@
     <title>write_page</title>
 </head>
 <body>
-    <section class="input-area">
+    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+        <div>
+            <input type="text" name="title" id="title" placeholder="제목">
+        </div>
+        <div>
+            <input type="text" name="writer" id="writer" placeholder="작성자">
+        </div>
+        <div>
+            <input type="text" name="content" id="content" placeholder="내용">
+        </div>
+        <div  class="form-action-buttons">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <!-- <section class="input-area">
         제목 <input type="text" id="task-input"/>
         작성자 <input type="text" id="task-input"/>
         내용 <input type="text" id="task-input"/>
         <button id="add-button" onclick="submit();">등록<i class="fa-solid fa-circle-plus"></i></button>
-    </section>
+    </section> -->
     <script src="./write_page.js"></script>
-    <script src="./main.js"></script>
 </body>
 </html>
