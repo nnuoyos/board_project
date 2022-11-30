@@ -17,16 +17,6 @@ console.log(taskInput);
 let addButton = document.getElementById('add-button');
 console.log(addButton);
 
-
-function readFormData(){ //제목,작성자,내용을 한곳에 모아놓으려면 배열들을 모아야함
-    var formData = {};
-    formData["title"]=document.getElementById("title").value;
-    formData["writer"]=document.getElementById("writer").value;
-    formData["content"]=document.getElementById("content").value;
-    return formData;
-}
-
-
 let taskList = []; //입력 받은 값을 차례로 배열에 넣을 예정
 let filterList = [];
 let tabs = document.querySelectorAll('.task-tabs div');
@@ -81,18 +71,12 @@ function render() {
         if (list[i].isComplete) {
             resultHTML += `<div class="task task-done" id="${list[i].id}">
         <span>${list[i].taskContent}</span>
-        <div class="button-box">
-            <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-arrow-rotate-left"></i></button>
-            <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-circle-xmark"></i></button>
-        </div>
+        
         </div>`;
         } else {
             resultHTML += `<div class="task" id="${list[i].id}">
         <span><a href="./content_page.html">${list[i].taskContent}</a></span>
-        <div class="button-box">
-            <button onclick="toggleComplete('${list[i].id}')">
-            <button onclick="deleteTask('${list[i].id}')">
-        </div>
+        
         </div>`;
         }
     }
@@ -173,4 +157,3 @@ function filter(event) {
 function randomIDGenerate() {
     return Math.random().toString(36).substr(2, 16);
 }
-
